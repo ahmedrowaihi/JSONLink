@@ -15,8 +15,6 @@ Link Block for the [Editor.js](https://codex.so/editor).
 
 Allows adding link previews to your articles.
 
-**Note:** this Tool requires server-side implementation for link data fetching. See [backend response format](#server-format) for more details.
-
 ## Installation
 
 ### Install via NPM
