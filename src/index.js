@@ -400,7 +400,7 @@ export default class LinkTool {
         url:
           'https://jsonlink.io/api/extract?url=' +
           url +
-          '&key=' +
+          '&api_key=' +
           this.config.key,
         headers: this.config.headers,
       });
