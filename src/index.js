@@ -82,6 +82,7 @@ export default class LinkTool {
      */
     this.config = {
       headers: config.headers || {},
+      key: config.key,
     };
 
     this.nodes = {
@@ -392,8 +393,15 @@ export default class LinkTool {
     this.data = { link: url };
 
     try {
+      if (!this.config.key) {
+        throw new Error('No key provided');
+      }
       const { body } = await ajax.get({
-        url: 'https://jsonlink.io/api/extract?url=' + url,
+        url:
+          'https://jsonlink.io/api/extract?url=' +
+          url +
+          '&key=' +
+          this.config.key,
         headers: this.config.headers,
       });
 
